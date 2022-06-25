@@ -6,26 +6,26 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Назва:') !!}
+    {!! Form::label('name', 'Name:') !!}
     <p>{!! $prints->name !!}</p>
 </div>
 
 <!-- Image Field -->
 <div class="form-group">
-    {!! Form::label('image', 'Фото:') !!}
+    {!! Form::label('image', 'A photo:') !!}
     <p>{!! $prints->image !!}</p>
     <img class="tt" src="{{ asset('img/templates/') }}/{!! $prints->image !!}">
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Створено:') !!}
+    {!! Form::label('created_at', 'Created:') !!}
     <p>{!! $prints->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Оновлено:') !!}
+    {!! Form::label('updated_at', 'Updated:') !!}
     <p>{!! $prints->updated_at !!}</p>
 </div>
 

@@ -20,7 +20,7 @@ Route::get('/dashboard', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/products', 'HomeController@index')->name('home');
 
 
 Route::resource('colors', 'ColorController');
@@ -34,3 +34,10 @@ Route::resource('users', 'UsersController');
 Route::resource('prints', 'PrintsController');
 
 Route::post('/uploade','PrintsController@uploade')->name('uploade');
+
+Route::get('/product', [
+    'uses' => 'ProductController@getIndex',
+    'as' => 'product.index'
+    ]);
+
+    

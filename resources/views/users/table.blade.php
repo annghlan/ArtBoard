@@ -1,9 +1,9 @@
 <table class="table table-responsive" id="dataTable">
     <thead>
         <tr>
-            <th>Ім'я</th>
-        <th>Електронна пошта</th>
-            <th>Дія</th>
+            <th>Name</th>
+        <th>Email</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>

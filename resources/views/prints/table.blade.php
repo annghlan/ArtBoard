@@ -8,8 +8,8 @@
 <table class="table table-responsive"  id="dataTable">
     <thead>
         <tr>
-        <th>Фото</th>
-            <th>Дія</th>
+        <th>A photo</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>

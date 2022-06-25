@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Футболки
+        T-shirts
         </h1>
     </section>
     <div class="content">
@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('clothes.show_fields')
-                    <a href="{!! route('clothes.index') !!}" class="btn btn-default">Назад</a>
+                    <a href="{!! route('clothes.index') !!}" class="btn btn-default">Back</a>
                 </div>
             </div>
         </div>

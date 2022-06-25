@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Панель керування</title>
+    <title>SHOPBUY</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" type="image/png" href="{{ asset('img/casual-t-shirt-.png')}}"/>
     <!-- Bootstrap 3.3.7 -->
@@ -43,7 +43,7 @@
 
         <!-- Logo -->
         <a href="#" style="background-color: #35912e;" class="logo">
-            <b>Футболки</b>
+            <b>T-shirts</b>
         </a>
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" style="background-color: #35912e;" role="navigation">
@@ -106,46 +106,46 @@
 
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-user-secret"></i> <span>Адміністратори</span>
+                        <i class="fa fa-user-secret"></i> <span>Admin</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i>Адміністратори</a></li>
+                        <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i>Admin</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-paint-brush"></i> <span>Кольори</span>
+                        <i class="fa fa-paint-brush"></i> <span>Colors</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('colors.index') }}"><i class="fa fa-paint-brush"></i>Кольори</a></li>
+                        <li><a href="{{ route('colors.index') }}"><i class="fa fa-paint-brush"></i>Add</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-reddit-alien"></i> <span>Типи футболок</span>
+                        <i class="fa fa-reddit-alien"></i> <span>Types of T-shirts</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('clothes.index') }}"><i class="fa fa-list"></i>Типи футболок</a></li>
+                        <li><a href="{{ route('clothes.index') }}"><i class="fa fa-list"></i>Types of T-shirts</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-picture-o"></i> <span>Принти</span>
+                        <i class="fa fa-picture-o"></i> <span>Prints</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('prints.index') }}"><i class="fa fa-picture-o"></i>Принти</a></li>
+                        <li><a href="{{ route('prints.index') }}"><i class="fa fa-picture-o"></i>Prints</a></li>
                     </ul>
                 </li>
             </ul>

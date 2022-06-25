@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Online дизайнер принтів для футболок</title>
+    <title>Shopbuy T-shirt Custom</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -152,7 +152,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="{{ route('home') }}">Online дизайнер принтів для футболок</a>
+            <a class="brand" href="{{ route('home') }}">Shopbuy T-shirt Custom</a>
 
         </div>
     </div>
@@ -161,7 +161,7 @@
 <div class="container">
     <section id="typography">
         <div class="page-header">
-            <h1>Налаштуйте футболку</h1>
+            <h1>Product Page</h1>
         </div>
 
         <!-- Headings & Paragraph Copy -->
@@ -170,14 +170,14 @@
 
                 <div class="tabbable"> <!-- Only required for left/right tabs -->
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab1" data-toggle="tab">Параметри футболки</a></li>
-                        <li><a href="#tab2" data-toggle="tab">Граватар</a></li>
+                        <li class="active"><a href="#tab1" data-toggle="tab">T-shirt parameters</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Custom T-shirt</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <div class="well">
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
-                                    Стиль футболки</p>
+                                    T-shirt style</p>
                                 <select id="shirtstyle" class="form-control">
                                     @foreach($shirts as $shirt)
                                         <option value="{{ $shirt->image }}">{{ $shirt->name }}</option>
@@ -187,20 +187,20 @@
                             </div>
                             <div class="well">
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
-                                    Дія</p>
-                                <button id="imgsavejpg" class="btn btn-primary" title="Зберегти як зображення"><i
+                                    Click the icon</p>
+                                <button id="imgsavejpg" class="btn btn-primary" title="Save as image"><i
                                             style="font-size: 25px;"
                                             class="fa fa-camera"
                                             aria-hidden="true"></i></button>
-                                <button id="imgsavepdf" class="btn btn-primary" title="Зберегти як PDF"><i
+                                <button id="imgsavepdf" class="btn btn-primary" title="Save as PDF"><i
                                             style="font-size: 25px;"
                                             class="fa fa-file-pdf-o"
                                             aria-hidden="true"></i></button>
-                                <button id="rotate" title="Повернути" class="btn btn-primary"><i
+                                <button id="rotate" title="Return" class="btn btn-primary"><i
                                             style="font-size: 25px;"
                                             class="fa fa-repeat"
                                             aria-hidden="true"></i></button>
-                                <button class="btn btn-primary" onclick="location.reload();" title="Видалити все"><i
+                                <button class="btn btn-primary" onclick="location.reload();" title="Delete everything"><i
                                             style="font-size: 25px;"
                                             class="fa fa-trash"
                                             aria-hidden="true"></i></button>
@@ -211,15 +211,15 @@
                         </div>
                         <div class="tab-pane" id="tab2">
                             <div class="well">
-                                <h4>Текст</h4>
+                                <h4>Text</h4>
                                 <div class="input-append">
                                     <input class="span2" id="text-string" type="text"
-                                           placeholder="Додати текст тут ...">
-                                    <button id="add-text" class="btn" title="Додати"><i class="icon-share-alt"></i>
+                                           placeholder="Add texthere ...">
+                                    <button id="add-text" class="btn" title="Add"><i class="icon-share-alt"></i>
                                     </button>
                                     <hr>
                                 </div>
-                                <h4>Додати зображення
+                                <h4>Chose a color
                                     <form hidden id="form1" runat="server">
                                         <input hidden type='file' id="imgInp"/>
                                     </form>
@@ -323,7 +323,7 @@
             <div class="span3">
                 <div class="well">
                     <ul class="nav">
-                        <h3>Виберіть колір</h3>
+                        <h3>Chose a color</h3>
                         @foreach($colors as $color)
                             <li class="color-preview" title="{{$color->name}}"
                                 style="background-color:{{$color->color}};"></li>
@@ -335,7 +335,7 @@
         <div id="editor"></div>
     </section>
 </div><!-- /container -->
-
+<!--
 <footer class="footer" id="footer" style="background-color: #333333; color: white; text-align: center; font-size: 20px;">
         <div class="footer-bottom">
             <div class="container text-center">

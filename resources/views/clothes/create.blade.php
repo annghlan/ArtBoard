@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Футболки
+            T-shirt
         </h1>
     </section>
     <div class="content">
@@ -54,14 +54,15 @@
             }
         </style>
         <div class="card">
-            <h3>Виберіть файл зображення</h3>
-            <h5>Рекомендовані розміри 530х630</h5>
+            <h3>Select an image file</h3>
+            <h5>Recommended sizes 530х630</h5>
             <form class="form form-horizontal" action="{{ route('clothes.uploade') }}" method="post"
                   enctype="multipart/form-data">
                 @csrf
                 <div style="position:relative;">
                     <a class='btn btn-primary' href='javascript:;'>
-                        Виберіть файл (фронт)...
+                        
+Select a file (front)...
                         <input required id="apkfile" name="myfile" accept="image/x-png" type="file"
                                style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
                                size="40" onchange='$("#upload-file-info").html($(this).val());'>
@@ -73,7 +74,8 @@
 
                 <div style="position:relative;">
                     <a class='btn btn-primary' href='javascript:;'>
-                        Виберіть файл (заднє)...
+                    Select file (back)
+...
                         <input required id="apkfile" name="myfile2" accept="image/x-png" type="file"
                                style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
                                size="40" onchange='$("#upload-file-info2").html($(this).val());'>

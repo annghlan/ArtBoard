@@ -3,7 +3,8 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Футболки
+           
+            T-shirts
         </h1>
    </section>
    <div class="content">

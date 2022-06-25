@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Принти
+            Prints
         </h1>
     </section>
     <div class="content">
@@ -54,13 +54,13 @@
             }
         </style>
         <div class="card">
-            <h3>Виберіть файл зображення</h3>
+            <h3>Select an image file</h3>
             <form class="form form-horizontal" action="{{ route('uploade') }}" method="post"
                   enctype="multipart/form-data">
                 @csrf
                 <div style="position:relative;">
                     <a class='btn btn-primary' href='javascript:;'>
-                        Виберіть файл...
+                        Select file ...
                         <input required id="apkfile" name="myfile" accept="image/x-png" type="file"
                                style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
                                name="file_source" size="40" onchange='$("#upload-file-info").html($(this).val());'>

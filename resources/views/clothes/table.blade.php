@@ -8,9 +8,9 @@
 <table class="table table-responsive" id="dataTable">
     <thead>
         <tr>
-            <th>Назва</th>
-        <th>Фото</th>
-            <th>Дія</th>
+            <th>Name</th>
+        <th>A photo</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
                 {!! Form::open(['route' => ['clothes.destroy', $clothes->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('clothes.show', [$clothes->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Ти впевнений?')"]) !!}
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>
                 {!! Form::close() !!}
             </td>

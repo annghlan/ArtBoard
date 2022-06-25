@@ -1,9 +1,9 @@
 <table class="table table-responsive" id="dataTable">
     <thead>
         <tr>
-            <th>Назва</th>
-        <th>Колір</th>
-            <th>Дія</th>
+            <th>Name</th>
+        <th>Color</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
                 {!! Form::open(['route' => ['colors.destroy', $color->id], 'method' => 'delete']) !!}
                 <a href="{!! route('colors.show', [$color->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                 <a href="{!! route('colors.edit', [$color->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Ти впевнений?')"]) !!}
+                {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you ure?')"]) !!}
                 {!! Form::close() !!}
             </td>
         </tr>

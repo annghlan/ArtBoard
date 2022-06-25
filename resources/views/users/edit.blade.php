@@ -2,8 +2,7 @@
 
 @section('content')
     <section class="content-header">
-        <h1>
-            Адміністратори
+        <h1>Admin
         </h1>
    </section>
    <div class="content">
