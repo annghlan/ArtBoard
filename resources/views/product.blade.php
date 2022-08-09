@@ -1,4 +1,3 @@
-@extends('layouts.master')
 @section('title')
 Shopping Cart 
 @endsection
@@ -16,12 +15,10 @@ Shopping Cart
  </div>
  @endif
  @if(!Auth::check())
- <button type="button" class="btn btn-success" 
-onclick="window.location='{{route('user.signup')}}'"> Create your own 
+ <button type="button" class="btn btn-success" > Create your own 
 T-shirt here </button> 
  @else 
- <button type="button" class="btn btn-success" 
-onclick="window.location='{{route('user.createdesign')}}'"> Create your 
+ <button type="button" class="btn btn-success" > Create your 
 own T-shirt here </button> 
  @endif
  </div>

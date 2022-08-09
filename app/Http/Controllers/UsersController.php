@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
+
 class UsersController extends AppBaseController
 {
     /** @var  UsersRepository */

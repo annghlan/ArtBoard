@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return redirect(route('home'));
 });
+
+Route::get('/welcome', function () {
+    return redirect(route('welcome'));
+});
+
 Route::get('/dashboard', function () {
     return redirect(route('users.index'));
 });
@@ -21,7 +26,11 @@ Route::get('/dashboard', function () {
 Auth::routes();
 
 Route::get('/products', 'HomeController@index')->name('home');
+//Route::get('/home', 'ProductController@getIndex')->name('welcome');
 
+Route::get('/home', function () {
+    return view('index');
+})->name('welcome');
 
 Route::resource('colors', 'ColorController');
 

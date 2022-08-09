@@ -52,7 +52,7 @@
                                 @endif
                             </div>
                         </div>
-
+                    
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -60,6 +60,18 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <div class="form-group row">    
+                            <label for="user-type" class="col-md-4 col-form-label text-md-right">{{ __('User Type') }}</label>
+                            <div class="col-md-6">
+                                <input type="radio" id="admin" name="user" value="admin">
+                                <label for="admin">Admin</label>
+
+                                <input type="radio" id="customer" name="user" value="customer">
+                                <label for="customer">Customer</label>
+                            </div>
+                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

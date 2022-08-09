@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -27,8 +29,28 @@ class RegisterController extends Controller
      * Where to redirect users after registration.
      *
      * @var string
+     *
      */
-    protected $redirectTo = '/dashboard';
+
+  
+    public function redirectTo() {
+        $type = Auth::user()->type; 
+        switch ($type) {
+          case 'admin':
+            return '/dashboard';
+            break;
+          case 'customer':
+            return '/products';
+            break; 
+      
+          default:
+            return ''; 
+          break;
+        }
+      } 
+
+
+   // 
 
     /**
      * Create a new controller instance.
@@ -53,6 +75,9 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6|confirmed',
+            //'type' => 'required|string',
+
         ]);
     }
 
@@ -68,6 +93,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'type' => Input::get($data['user'] == 'admin' ) ? 'admin' : 'customer',
+            // $data = new users;
+            // $data->name = Input::get("name");
+            // $data->email = Input::get("email");
+            // $data->password = Input::get("password");
+            // $data->type = Input::post($data['user']) == 'admin' ? 1 : 0;
+
         ]);
     }
 }
