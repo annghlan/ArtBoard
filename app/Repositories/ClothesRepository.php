@@ -21,7 +21,9 @@ class ClothesRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'name',
-        'image'
+        'image',
+        'size',
+        'price'
     ];
 
     /**

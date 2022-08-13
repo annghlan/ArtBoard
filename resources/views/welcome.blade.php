@@ -118,6 +118,8 @@
             font-family: "Engagement";
         }
 
+     
+
         .img-polaroid {
             padding: 0;
             margin: 0;
@@ -140,28 +142,17 @@
     </style>
 </head>
 
-<body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+<body >
 
-<!-- Navbar
-  ================================================== -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<a class="navbar-brand text-success logo h1 align-self-center" href="{{ url('/')}}">
+                SHOPBUY
             </a>
-            <a class="brand" href="{{ route('home') }}">Shopbuy T-shirt Custom</a>
 
-        </div>
-    </div>
-</div>
 
 <div class="container">
     <section id="typography">
         <div class="page-header">
-            <h1>Product Page</h1>
+            <h2>Shopbuy T-shirt Custom</h2>
         </div>
 
         <!-- Headings & Paragraph Copy -->

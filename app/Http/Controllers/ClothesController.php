@@ -6,6 +6,7 @@ use App\Http\Requests\CreateClothesRequest;
 use App\Http\Requests\UpdateClothesRequest;
 use App\Repositories\ClothesRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Clothes;
 use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
@@ -37,6 +38,17 @@ class ClothesController extends AppBaseController
             ->with('clothes', $clothes);
     }
 
+    public function products(Request $request)
+    {
+        // $this->clothesRepository->pushCriteria(new RequestCriteria($request));
+        // $clothes = $this->clothesRepository->all();
+
+        // return view('products')
+        //     ->with('clothes', $clothes);
+        $clothes = Clothes::all();
+        return view('products',['clothes'=>$clothes]);  
+    }
+
     /**
      * Show the form for creating a new Clothes.
      *
@@ -59,12 +71,13 @@ class ClothesController extends AppBaseController
         $input = $request->all();
 
         $clothes = $this->clothesRepository->create($input);
+ 
 
         $location = public_path() . '/tmp/' . $input["image"] . '_front.png';
         $location2 = public_path() . '/tmp/' . $input["image"] . '_back.png';
         rename($location, public_path() . '/img/t-shirts/' . $input["image"] . '_front.png');
         rename($location2, public_path() . '/img/t-shirts/' . $input["image"] . '_back.png');
-
+     
         Flash::success('Clothes saved successfully.');
 
         return redirect(route('clothes.index'));
@@ -90,6 +103,7 @@ class ClothesController extends AppBaseController
         return view('clothes.show')->with('clothes', $clothes);
     }
 
+ 
     /**
      * Show the form for editing the specified Clothes.
      *

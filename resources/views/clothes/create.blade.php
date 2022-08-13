@@ -83,8 +83,10 @@ Select a file (front)...
                     &nbsp;
                     <span class='label label-info' id="upload-file-info2"></span>
                 </div>
+
+                
                 <br>
-                <input class="form-control btn btn-warning" type="submit" value="Завантажити файл на сервер">
+                <input class="form-control btn btn-warning" type="submit" value="upload">
             </form>
 
             <div style="height: 50px;" class="progress">

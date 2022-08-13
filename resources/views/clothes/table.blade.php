@@ -9,7 +9,9 @@
     <thead>
         <tr>
             <th>Name</th>
-        <th>A photo</th>
+            <th>A photo</th>
+            <th>Size</th>
+            <th>Price</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -20,6 +22,9 @@
             <td>
                 <img class="cloth" src="img/t-shirts/{!! $clothes->image !!}_front.png">
             </td>
+            <td>{!! $clothes->size !!}</td>
+            <td>{!! $clothes->price !!}</td>
+
             <td>
                 {!! Form::open(['route' => ['clothes.destroy', $clothes->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

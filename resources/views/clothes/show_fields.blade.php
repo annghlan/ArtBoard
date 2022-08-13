@@ -10,6 +10,15 @@
     <p>{!! $clothes->name !!}</p>
 </div>
 
+<div class="form-group">
+    {!! Form::label('size', 'Size:') !!}
+    <p>{!! $clothes->size !!}</p>
+</div>
+
+<div class="form-group">
+    {!! Form::label('price', 'Price:') !!}
+    <p>{!! $clothes->price !!}</p>
+</div>
 <!-- Image Field -->
 <div class="form-group">
     {!! Form::label('image', 'A photo:') !!}

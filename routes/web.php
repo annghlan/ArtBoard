@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ClothesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect(route('home'));
-});
+
 
 Route::get('/welcome', function () {
     return redirect(route('welcome'));
@@ -25,12 +23,17 @@ Route::get('/dashboard', function () {
 
 Auth::routes();
 
-Route::get('/products', 'HomeController@index')->name('home');
+Route::get('/customDesign', 'HomeController@index')->name('home');
 //Route::get('/home', 'ProductController@getIndex')->name('welcome');
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('index');
 })->name('welcome');
+
+// Route::get('/products', function () {
+//     return view('products');
+// })->name('products');
+Route::get('/products',[ClothesController::class,'products'])->name('products');
 
 Route::resource('colors', 'ColorController');
 

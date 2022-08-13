@@ -25,7 +25,9 @@ class Clothes extends Model
 
     public $fillable = [
         'name',
-        'image'
+        'image',
+        'size',
+        'price'
     ];
 
     /**
@@ -35,7 +37,9 @@ class Clothes extends Model
      */
     protected $casts = [
         'name' => 'string',
-        'image' => 'string'
+        'image' => 'string',
+        'size' => 'string',
+        'price' => 'string'
     ];
 
     /**
