@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Clothes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
-class DatabaseSeeder extends Seeder
+class CollectionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-          factory(App\Models\Clothes::class,10)->create();
-        }
+        factory(App\Models\Collection::class,10)->create();
+    }
 }
