@@ -6,37 +6,37 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Імя:') !!}
+    {!! Form::label('name', 'Name:') !!}
     <p>{!! $users->name !!}</p>
 </div>
 
 <!-- Email Field -->
 <div class="form-group">
-    {!! Form::label('email', 'Електронна пошта:') !!}
+    {!! Form::label('email', 'Email:') !!}
     <p>{!! $users->email !!}</p>
 </div>
 
 <!-- Password Field -->
 <div class="form-group">
-    {!! Form::label('password', 'Пароль:') !!}
+    {!! Form::label('password', 'Password:') !!}
     <p>{!! $users->password !!}</p>
 </div>
 
 <!-- Remember Token Field -->
 <div class="form-group">
-    {!! Form::label('remember_token', 'Токен:') !!}
+    {!! Form::label('remember_token', 'Тoken:') !!}
     <p>{!! $users->remember_token !!}</p>
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Створено :') !!}
+    {!! Form::label('created_at', 'Сreated by: :') !!}
     <p>{!! $users->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Оновлено:') !!}
+    {!! Form::label('updated_at', 'Updated:') !!}
     <p>{!! $users->updated_at !!}</p>
 </div>
 

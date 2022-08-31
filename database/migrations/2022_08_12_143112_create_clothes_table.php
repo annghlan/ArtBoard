@@ -20,7 +20,7 @@ class CreateClothesTable extends Migration
             $table->string('size');
             $table->string('price');
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes(); //temporary del
         });
     }
 

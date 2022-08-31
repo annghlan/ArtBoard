@@ -31,6 +31,8 @@ class Users extends Model
     public $fillable = [
         'name',
         'email',
+        'contact_no',
+        'location',
         'password',
         'remember_token'
     ];

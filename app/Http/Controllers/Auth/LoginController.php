@@ -35,7 +35,7 @@ class LoginController extends Controller
             return '/dashboard';
             break;
           case 'customer':
-            return '/products';
+            return '/customDesign';
             break; 
       
           default:
@@ -51,6 +51,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest')->except('logout'); //middleware ley bichhhama baseraa 
     }
 }

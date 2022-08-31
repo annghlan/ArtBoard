@@ -30,7 +30,7 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">ts@shopbuy.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="ts@shopbuy.com">ts@shopbuy.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">9860926926</a>
                 </div>
@@ -61,20 +61,20 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/')}}">Home</a>
+                            <a class="nav-link" href="{{ url('/')}}">Home</a>  <!-- url / home ma link gareyko -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/products')}}">Products</a>
+                            <a class="nav-link" href="{{ url('/products')}}">Products</a> <!-- products page ma link -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">Custom Your Design</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="{{ route('home') }}">Custom Your Design</a> <!-- route home ma connect gareyko xa -->
                         </li>
                     </ul>
                 </div>
+
+               
                 <div class="navbar align-self-center d-flex">
+                    <!--
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
@@ -86,21 +86,27 @@
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
+-->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                        
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="{{ url('/profile')}}">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                     </a>
                 </div>
-            </div>
 
-        </div>
-    </nav>
+<div>
+    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('login')}}">Login/Register</a> <!-- route home ma connect gareyko xa -->
+        </li>
+    </ul>
+</div>
+</nav>
     <!-- Close Header -->
 
-    <!-- Modal -->
+    <!-- Modal --> <!-- bootstrapko class haru template ko --> 
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
@@ -119,7 +125,7 @@
 
 
 
-    <!-- Start Banner Hero -->
+    <!-- start shopbuy ko moto -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
         
         <div class="carousel-inner">
@@ -132,11 +138,8 @@
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
                                 <h1 class="h1 text-success"><b>SHOPBUY</b></h1>
-                                <h2 class="h1 text-success">from our to YOURS.</h2>
-                                <h3 class="h2">Available Templates</h3>
-                                <p>
-                                    Custom your own desirable designs with various intresting templates or design yourself by using our features. 
-                                </p>
+                                <h2 class="h1 text-success">from ours to YOURS.</h2>
+                                
                             </div>
                         </div>
                     </div>
@@ -146,10 +149,10 @@
         </div>
     
     </div>
-    <!-- End Banner Hero -->
+    <!-- End shopbuy ko moto -->
 
 
-    <!-- Start Categories of The Month -->
+    <!-- Start available designs wala -->
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
@@ -175,7 +178,7 @@
             </div>
         </div>
     </section>
-    <!-- End Categories of The Month -->
+    <!-- End available designs wala  -->
 
 
     <!-- Start Featured Product -->
@@ -190,47 +193,38 @@
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
                             <img src="./assets/img/5.jpg" class="card-img-top" alt="...">
-                        </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
-                               
                                 <li class="text-muted text-right">NPR.999</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Luffy TS</a>
+                            <a class="h2 text-decoration-none text-dark">Luffy TS</a>
                             
                           
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./assets/img/6.jpg" class="card-img-top" alt="...">
-                        </a>
+                    <div class="card h-100">               
+                            <img src="./assets/img/6.jpg" class="card-img-top" alt="...">                       
                         <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                               
+                            <ul class="list-unstyled d-flex justify-content-between">                              
                                 <li class="text-muted text-right">NPR.999</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Wings TS</a>
+                            <a class="h2 text-decoration-none text-dark">Wings TS</a>
                            
                           
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./assets/img/7.jpg" class="card-img-top" alt="...">
-                        </a>
+                    <div class="card h-100">                      
+                            <img src="./assets/img/7.jpg" class="card-img-top" alt="...">                       
                         <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                
+                            <ul class="list-unstyled d-flex justify-content-between">                              
                                 <li class="text-muted text-right">NPR.999</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Haku TS</a>
+                            <a class="h2 text-decoration-none text-dark">Haiku TS</a>
                             
                         </div>
                     </div>
@@ -292,10 +286,10 @@
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/shop_buy__/?hl=en"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                
                         </li>
@@ -317,8 +311,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2022 SHOPBUY
-                    
+                            Copyright &copy; 2022 SHOPBUY   
                         </p>
                     </div>
                 </div>

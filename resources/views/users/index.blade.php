@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin') <!-- admin ko taniraxa layput bata -->
 
 @section('content')
     <section class="content-header">

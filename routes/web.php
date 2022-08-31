@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\ClothesController;
+use App\Http\Controllers\ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,7 @@ use App\Http\Controllers\ClothesController;
 
 
 
-Route::get('/welcome', function () {
+Route::get('/welcome', function () { // /welcome is home page directory
     return redirect(route('welcome'));
 });
 
@@ -21,19 +21,22 @@ Route::get('/dashboard', function () {
     return redirect(route('users.index'));
 });
 
-Auth::routes();
+Auth::routes(); //auth login haruko lagi route banauxa
 
-Route::get('/customDesign', 'HomeController@index')->name('home');
+Route::get('/customDesign', 'WelcomeController@index')->name('home');
 //Route::get('/home', 'ProductController@getIndex')->name('welcome');
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', function () { // '/' is home page directory
+    return view('index'); // view vitra index ma html ui display code xa  
 })->name('welcome');
 
-// Route::get('/products', function () {
-//     return view('products');
-// })->name('products');
-Route::get('/products',[ClothesController::class,'products'])->name('products');
+Route::get('/profile', function () {  //customer profile ko route garyekoo
+    return view('customer.profile');
+})->name('profile');
+
+Route::get('/products',[ProductsController::class,'products'])->name('products');
+
+// Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
 
 Route::resource('colors', 'ColorController');
 

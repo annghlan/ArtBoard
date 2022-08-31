@@ -16,7 +16,7 @@ class ColorController extends AppBaseController
     /** @var  ColorRepository */
     private $colorRepository;
 
-    public function __construct(ColorRepository $colorRepo)
+    public function __construct(ColorRepository $colorRepo) //login garya x aki nai vanera check garxa 
     {
         $this->colorRepository = $colorRepo;
         $this->middleware('auth');
@@ -28,7 +28,7 @@ class ColorController extends AppBaseController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
+    public function index(Request $request) //colors show garna index ma
     {
         $this->colorRepository->pushCriteria(new RequestCriteria($request));
         $colors = $this->colorRepository->all();
@@ -54,7 +54,7 @@ class ColorController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateColorRequest $request)
+    public function store(CreateColorRequest $request) // add garxa 
     {
         $input = $request->all();
 
@@ -72,7 +72,7 @@ class ColorController extends AppBaseController
      *
      * @return Response
      */
-    public function show($id)
+    public function show($id) // view waal show garxa
     {
         $color = $this->colorRepository->findWithoutFail($id);
 
@@ -92,9 +92,9 @@ class ColorController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($id) //edit garauxa
     {
-        $color = $this->colorRepository->findWithoutFail($id);
+        $color = $this->colorRepository->findWithoutFail($id); 
 
         if (empty($color)) {
             Flash::error('Color not found');
@@ -113,7 +113,7 @@ class ColorController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateColorRequest $request)
+    public function update($id, UpdateColorRequest $request)   //update garuxa
     {
         $color = $this->colorRepository->findWithoutFail($id);
 
@@ -137,7 +137,7 @@ class ColorController extends AppBaseController
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($id) //delete
     {
         $color = $this->colorRepository->findWithoutFail($id);
 

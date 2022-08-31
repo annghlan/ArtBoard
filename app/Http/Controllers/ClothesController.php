@@ -12,10 +12,10 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
-class ClothesController extends AppBaseController
+class ClothesController extends AppBaseController //class name
 {
     /** @var  ClothesRepository */
-    private $clothesRepository;
+    private $clothesRepository; //$ variable
 
     public function __construct(ClothesRepository $clothesRepo)
     {

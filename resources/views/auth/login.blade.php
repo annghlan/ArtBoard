@@ -50,6 +50,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- register button -->
+
+                        <div class="form-group row" style= "margin-left: 230px">
+                            <a href="{{route('register')}}">Register here.</a>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

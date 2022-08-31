@@ -69,7 +69,7 @@
                     <span class='label label-info' id="upload-file-info"></span>
                 </div>
                 <br>
-                <input class="form-control btn btn-warning" type="submit" value="Завантажити файл на сервер">
+                <input class="form-control btn btn-warning" type="submit" value="Upload the file to ther server">
             </form>
 
             <div style="height: 50px;" class="progress">

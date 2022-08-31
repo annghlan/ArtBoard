@@ -40,7 +40,7 @@ class RegisterController extends Controller
             return '/dashboard';
             break;
           case 'customer':
-            return '/products';
+            return '/customDesign';
             break; 
       
           default:
@@ -74,6 +74,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'contact_no' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
             'password' => 'required|string|min:6|confirmed',
             'password' => 'required|string|min:6|confirmed',
             //'type' => 'required|string',
@@ -92,8 +94,10 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'contact_no' => $data['contact_no'],
+            'location' => $data['location'],
             'password' => Hash::make($data['password']),
-            'type' => Input::get($data['user'] == 'admin' ) ? 'admin' : 'customer',
+            'type' => Input::get($data['user'] == 'customer' ) ? 'customer' : 'admin',
             // $data = new users;
             // $data->name = Input::get("name");
             // $data->email = Input::get("email");

@@ -144,15 +144,13 @@
 
 <body >
 
-<a class="navbar-brand text-success logo h1 align-self-center" href="{{ url('/')}}">
-                SHOPBUY
-            </a>
+<a class="navbar-brand text-success logo h1 align-self-center" href="{{ url('/')}}">SHOPBUY</a>
 
 
 <div class="container">
     <section id="typography">
         <div class="page-header">
-            <h2>Shopbuy T-shirt Custom</h2>
+            <h2>Custom Yours</h2>
         </div>
 
         <!-- Headings & Paragraph Copy -->
@@ -174,14 +172,15 @@
                                         <option value="{{ $shirt->image }}">{{ $shirt->name }}</option>
                                         @endforeach
                                 </select>
-                                <!--						      </p>-->
+                                
+                                <!-- camera wala icon-->
                             </div>
                             <div class="well">
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
                                     Click the icon</p>
                                 <button id="imgsavejpg" class="btn btn-primary" title="Save as image"><i
                                             style="font-size: 25px;"
-                                            class="fa fa-camera"
+                                            class="fa fa-save"
                                             aria-hidden="true"></i></button>
                                 <button id="imgsavepdf" class="btn btn-primary" title="Save as PDF"><i
                                             style="font-size: 25px;"
@@ -199,6 +198,7 @@
                             </div>
 
 
+                            <!-- add text wala -->
                         </div>
                         <div class="tab-pane" id="tab2">
                             <div class="well">
@@ -210,7 +210,7 @@
                                     </button>
                                     <hr>
                                 </div>
-                                <h4>Chose a color
+                                <h4>Chose a prints
                                     <form hidden id="form1" runat="server">
                                         <input hidden type='file' id="imgInp"/>
                                     </form>
@@ -219,6 +219,7 @@
                                                                                    aria-hidden="true"></i></button>
                                 </h4>
 
+                                <!-- prints -->
                                 <div id="avatarlist" style="max-height: 500px; overflow: scroll;">
                                     @foreach($prints as $image)
                                         <img class="img-polaroid tt" src="{{ asset('img/templates/') }}/{{$image->image}}">
@@ -229,6 +230,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- font haru text add garna ts ma -->
             <div class="span6">
                 <div align="center" style="min-height: 32px;">
                     <div class="clearfix">
@@ -265,6 +268,7 @@
                                 <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement">Engagement</a>
                                 </li>
                             </ul>
+                            <!-- bold ,iatlic option harukolagi -->
                             <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png"
                                                                                                height="" width="">
                             </button>
@@ -282,6 +286,8 @@
                                                                               value="#000000"></a>
                             <!--- Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --->
                         </div>
+
+                        <!-- ts ko back front view part -->
                         <div class="pull-right" align="" id="imageeditor" style="display:none">
                             <div class="btn-group">
                                 <button class="btn" id="bring-to-front" title="Bring to Front"><i
@@ -296,12 +302,13 @@
                         </div>
                     </div>
                 </div>
-                <!--	EDITOR      -->
+<!--	ts ko white wala style garya    -->
                 <div id="shirtDiv" class="page"
                      style="width: 530px; height: 630px; position: relative; background-color: rgb(255, 255, 255);">
                     <!--img id="tshirtFacing" src="img/crew_front.png"></img-->
                     <img id="tshirtFacing" src="img/t-shirts/crew_front.png"></img>
 
+<!-- canvas area -->
                     <div id="drawingArea"
                          style="position: absolute;top: 100px;left: 160px;z-index: 10;width: 200px;height: 400px;">
                         <canvas id="tcanvas" width=200 height="400" class="hover"
@@ -310,6 +317,7 @@
                 </div>
 
             </div>
+ <!-- ts ko lagi  color -->
 
             <div class="span3">
                 <div class="well">
