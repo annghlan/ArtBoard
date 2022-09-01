@@ -90,7 +90,7 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
 -->
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="/cart">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                        
                     </a>
@@ -121,7 +121,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href=""><i class="far fa-heart"></i></a></li> <!-- icon heart,cart wala -->
                                         <li><a class="btn btn-success text-white mt-2" href=""><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href=""><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2 risi" data-id="{{$clothes->id}}" href="#"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -237,6 +237,30 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+$(".risi").on("click", function (e){
+var token = "{{ csrf_token() }}";
+
+$.ajax({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+        url  : "/cart",
+        type : "POST",
+        dataType:  "JSON",
+        data : {id:$(this).attr("data-id"),'_token':token},
+        success : function ( response ){
+            if (response.status=="Already added in cart."){
+                alert('Already added in cart.')
+            }
+            else{
+                alert('Add to Cart Successful.')
+            }
+           
+        }
+    })
+});
+</script>
     <!-- End Script -->
 </body>
 

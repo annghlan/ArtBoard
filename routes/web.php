@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,9 +11,11 @@ use App\Http\Controllers\ProductsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/cart/delete','CartController@delete');
 
+Route::post('/cart','CartController@create');
 
-
+Route::get('/cart','CartController@index');
 Route::get('/welcome', function () { // /welcome is home page directory
     return redirect(route('welcome'));
 });

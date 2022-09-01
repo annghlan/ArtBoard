@@ -97,7 +97,7 @@ class RegisterController extends Controller
             'contact_no' => $data['contact_no'],
             'location' => $data['location'],
             'password' => Hash::make($data['password']),
-            'type' => Input::get($data['user'] == 'customer' ) ? 'customer' : 'admin',
+            'type' => $data['user'],
             // $data = new users;
             // $data->name = Input::get("name");
             // $data->email = Input::get("email");

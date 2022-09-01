@@ -87,7 +87,7 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
 -->
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="/cart">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                        
                     </a>
@@ -99,7 +99,18 @@
 <div>
     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
         <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Login/Register</a> <!-- route home ma connect gareyko xa -->
+        @if(Auth::check())
+        <a class = "nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    Logout
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+</form>
+@else
+<a class="nav-link" href="{{route('login')}}">Login/Register</a> <!-- route home ma connect gareyko xa -->
+
+@endif
         </li>
     </ul>
 </div>
