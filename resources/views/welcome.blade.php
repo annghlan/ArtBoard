@@ -162,12 +162,32 @@
         .tt {
             margin-right: 4px;
         }
+
+        .navbar .container {
+    width: 100% !important;
+}
+.navbar .nav>li>a {
+    font-family: 'Roboto', sans-serif !important;
+    color: #212934 !important;
+}
+.navbar li {
+    padding-right: 100px !important;
+}
+a.nav-link:hover {
+    background: transparent !important;
+    color: green !important;
+}
+.navbar .nav>li>a:hover {
+    color: green !important;
+
+}
     </style>
 </head>
 
-<body >
+<body style="padding-top:0 !important;">
+    
     <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+    <nav style="margin-bottom:0 !important" class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
                 <div>
@@ -189,19 +209,20 @@
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container">
+        <div style="display: flex;justify-content: space-between !important;width: 100%;max-width: 100%;" >
 
             <a class="navbar-brand text-success logo h1 align-self-center" href="{{ url('/')}}">
                 SHOPBUY
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+            <div style="display: flex;align-items: center;justify-content: space-between;">
+                <div style="padding-right: 50px;">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="padding-right: 100px;">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/')}}">Home</a>
                         </li>
@@ -228,17 +249,18 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
 -->
-                    <a class="nav-icon position-relative text-decoration-none" href="/cart">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <a class="nav-icon position-relative text-decoration-none" style="padding-right: 20px;" href="/cart">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1" style="font-size: 25px;"></i>
                        
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <i class="fa fa-fw fa-user text-dark mr-3" style="font-size: 25px;"></i>
                     </a>
                 </div>
             </div>
 
         </div>
+    </div>
     </nav>
 
     <!-- Close Header -->
