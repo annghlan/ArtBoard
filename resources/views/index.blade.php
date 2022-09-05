@@ -87,11 +87,11 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
 -->
-                    <a class="nav-icon position-relative text-decoration-none" href="/cart">
+                    <a class="nav-icon position-relative text-decoration-none" href="/cart"> <!-- cart ko icon -->
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                        
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="{{ url('/profile')}}">
+                    <a class="nav-icon position-relative text-decoration-none" href="{{ url('/profile')}}"> <!-- profile ko icon -->
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                     </a>
                 </div>
@@ -108,7 +108,7 @@
     {{ csrf_field() }}
 </form>
 @else
-<a class="nav-link" href="{{route('login')}}">Login/Register</a> <!-- route home ma connect gareyko xa -->
+<a class="nav-link" href="{{route('login')}}">Login/Register</a> <!-- route login/register ma connect gareyko xa -->
 
 @endif
         </li>
@@ -118,7 +118,8 @@
     <!-- Close Header -->
 
     <!-- Modal --> <!-- bootstrapko class haru template ko --> 
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!--
+        <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -133,7 +134,7 @@
             </form>
         </div>
     </div>
-
+-->
 
 
     <!-- start shopbuy ko moto -->
@@ -333,11 +334,13 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
+    <!--
     <script src="{{URL::asset('assets/js/jquery-1.11.0.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/jquery-migrate-1.2.1.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/templatemo.js')}}"></script>
     <script src="{{URL::asset('assets/js/custom.js')}}"></script>
+-->
     <!-- End Script -->
 </body>
 

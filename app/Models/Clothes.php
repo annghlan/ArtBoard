@@ -19,7 +19,6 @@ class Clothes extends Model
 
     public $table = 'clothes';
     
-
     protected $dates = ['deleted_at'];
 
 
