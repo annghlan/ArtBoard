@@ -300,7 +300,7 @@ a.nav-link:hover {
                             <div class="well">
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
                                     Click the icon</p>
-                                <button id="imgsavejpg" class="btn btn-primary" title="Save as image"><i
+                                <button id="risi" class="btn btn-primary" title="Save as image"><i
                                             style="font-size: 25px;"
                                             class="fa fa-save"
                                             aria-hidden="true"></i></button>
@@ -525,12 +525,40 @@ a.nav-link:hover {
         });
         $('.loading-blink').hide();
 
-        $('#imgsavejpg').on('click', function () {
+        $('#risi').on('click', function () {
             function save() {
-                html2canvas(document.querySelector("#test")).then(canvas => {
-                    // document.body.appendChild(canvas)
+                html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
+                    document.body.appendChild(canvas)
                     $(canvas).get(0).toBlob(function (blob) {
-                    var filesaver = saveAs(blob, "TShirt.png");
+                    var name= "id" + Math.random().toString(16).slice(2)
+                    var filesaver = saveAs(blob, name+".png");
+                    var token = "{{ csrf_token() }}";
+                    var fd = new FormData();
+
+                    fd.append('image', blob);
+                    fd.append('name', name);
+                    fd.append('_token', token);
+
+                    $.ajax({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+        url  : "/save/custom",
+        type : "POST",
+        dataType:  "JSON",
+        data : fd,
+        processData: false,
+        contentType: false,
+        success : function ( response ){
+            // window.location.href = "/cart"
+           
+        }
+    })
+
+
+
+
+                    
                     filesaver.onwriteend = function () {
                         $('.loading-blink').hide();
                         $('#test').empty();
@@ -538,8 +566,8 @@ a.nav-link:hover {
 
 
                 });
-            })
-                ;
+            });
+                
             }
 
             LoadeShirts();
@@ -621,7 +649,7 @@ a.nav-link:hover {
                 ;
             }, 1100);
             setTimeout(function () {
-                doc.save("T-Shirt.pdf");
+                doc.save("T-Shirt.png");
                 $('.loading-blink').hide();
                 $('#test').empty();
             }, 1700);
@@ -629,6 +657,7 @@ a.nav-link:hover {
         });
 
     });
+    
 
 </script>
 <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index:999999;" id="loading-custom-overlay"

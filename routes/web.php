@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CustomController;
+use App\Http\Controllers\profile_controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +14,9 @@ use App\Http\Controllers\CartController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('/save/custom','CustomController@index');
+
 Route::post('/cart/delete','CartController@delete');
 
 Route::post('/cart','CartController@create');
@@ -33,9 +39,7 @@ Route::get('/', function () { // '/' is home page directory
     return view('index'); // view vitra index ma html ui display code xa  
 })->name('welcome');
 
-Route::get('/profile', function () {  //customer profile ko route garyekoo
-    return view('customer.profile');
-})->name('profile');
+Route::get('/profile','profile_controller@index' );
 
 Route::get('/products',[ProductsController::class,'products'])->name('products');
 

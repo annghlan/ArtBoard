@@ -1,13 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User; //<databse
+use Auth;
+use DB;
 
 use Illuminate\Http\Request;
 
 class profile_controller extends Controller
 {
-    //
-      Users::all(); //clothes table bata data tanera viwe garauxa
-        return view('products',['clothes'=>$clothes]);  
+    public function index(){
+      if (Auth::check()){
+      $user=Auth::user();
+      $custom_table=DB::table('customs')->where("user_id","=",  Auth::id())->get();
+      return view('customer.profile',['user'=>$user, 'customs'=>$custom_table]);
+      }
+      else{
+        return redirect("/");
+    }
+
+
+    }
 }
